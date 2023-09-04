@@ -22,7 +22,7 @@ public sealed class Instrumento : Entidade
 
     public Instrumento(int id, string nome, TipoInstrumento tipo, decimal preco, string propriedade)
     {
-        DominioValidacaoExcecao.When(id < 1, "Valor de ID inválido.");
+        DominioValidacaoExcecao.When(id < 1, "Valor de ID invalido.");
         Id = id;
         ValidarDominio(nome, tipo, preco, propriedade);
 

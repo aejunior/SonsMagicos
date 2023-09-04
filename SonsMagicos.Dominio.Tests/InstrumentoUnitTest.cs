@@ -19,6 +19,6 @@ public class InstrumentoUnitTest
         Action action = () => new Instrumento(-1, "Violão", TipoInstrumento.CORDA, 12.30m, "Faz você dormir entediado");
         action.Should()
             .Throw<SonsMagicos.Dominio.Validacao.DominioValidacaoExcecao>()
-            .WithMessage("Valor de ID inválido.");
+            .WithMessage("Valor de ID invalido.");
     }
 }
