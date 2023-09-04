@@ -53,4 +53,4 @@ Referências
 - [Swagger](https://medium.com/tableless/documenta%C3%A7%C3%A3o-de-apis-com-swagger-no-asp-net-core-e7bc3caa9185)
 - [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html)
 - [Implementar repositórios personalizados com o Entity Framework Core](https://learn.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implementation-entity-framework-core#implement-custom-repositories-with-entity-framework-core)
-- https://github.com/jbogard/MediatR/wiki
+- [MediatR Wiki](https://github.com/jbogard/MediatR/wiki)
