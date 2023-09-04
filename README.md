@@ -2,7 +2,6 @@
 ## Contexto 
 Uma loja vende instrumentos musicais mágicos. Cada instrumento tem um nome, tipo (corda, sopro, percussão), preço e uma propriedade mágica (ex: flauta que faz o ouvinte dormir). A loja quer uma API RESTful para gerenciar seu inventário. Lista de Requisitos
 
-
 ### Instrumentos
 |Nome|<TipoDeInstrumento>Tipo|Preco|Propriedade|
 |--|--|--|--|
@@ -18,21 +17,16 @@ Uma loja vende instrumentos musicais mágicos. Cada instrumento tem um nome, tip
 ## Requisitos
 
 - Implementar uma API RESTful com endpoints para adicionar, remover, atualizar e listar instrumentos.
-    - DO: Rotas para adicionar, remover, atualizar e listar instrumentos.
 - Armazenar informações dos instrumentos em um banco de dados de sua escolha.
-    - DO: Banco de dados: SQL Server 2022.
 - Criar uma funcionalidade que calcule o preço total de todos os instrumentos de um tipo específico (ex: todos os instrumentos de corda).
-    - DO: Rota para retonar o preço total de todos os instrumentos de um tipo específico.
 - Criar uma funcionalidade de busca textual (texto exato) para as propriedades mágicas (ex: ao buscar "dormir", deve retornar todos os instrumentos com poderes que contenham "dormir")
-    - DO: Rota para retonar todos os instrumentos com uma propriedade `(LIKE)`.
 - O código deve ser bem organizado, comentado e seguir padrões de desenvolvimento, como os princípios SOLID.
-    - DOING: Organização do código.
+    - DOING:
 - Implementar uma camada de autenticação básica para acessar os endpoints da API.
-    - DOING: Buscar material para implementação.
+    - DOING:
 - O projeto deve ser feito em .NET 6.0 ou 7.0 e deve executar em windows/linux.
-    - DO: .NET 7.0.
 - Deve ser utilizado o Entity Framework Core como ORM.
-    - DO: Entity Framework Core.
+
 ## Entrega
 - Código fonte da aplicação (pode ser um repositório GIT público)
 - Documentação em Markdown ou PDF explicando como executar o código, incluindo as rotas da API.
