@@ -1,6 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.OpenApi.Models;
 using SonsMagicos.Api.Auth;
 using SonsMagicos.Dominio.Conta;
+using SonsMagicos.Infraestrutura.Contexto;
 using SonsMagicos.Infraestrutura.IoC;
 using System.Reflection;
 
@@ -35,8 +38,9 @@ builder.Services.AddSwaggerGen(options =>
 
 });
 
+
 var app = builder.Build();
- 
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -57,6 +61,7 @@ app.UseMiddleware<BasicAuthMiddleware>();
 
 app.MapControllers();
 
+ExecutingMigration(app);
 SeedUserRoles(app);
 
 app.Run();
@@ -70,5 +75,29 @@ void SeedUserRoles(IApplicationBuilder app)
                                .GetService<ISeedUsuarioCargoInicial>();
         seed.SeedCargos();
         seed.SeedUsuarios();
+    }
+}
+
+void ExecutingMigration(IApplicationBuilder app)
+{
+    using (var serviceScope = app.ApplicationServices.CreateScope())
+    {
+        var services = serviceScope.ServiceProvider;
+        try
+        {
+            var dbContext = services.GetRequiredService<AplicacaoBdContexto>();
+
+            if (dbContext.Database.IsSqlServer())
+            {
+                if (!dbContext.Database.EnsureCreated())
+                {
+                    dbContext.Database.Migrate();
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+        }
+
     }
 }

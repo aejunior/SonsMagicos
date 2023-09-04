@@ -33,7 +33,7 @@ static public class DependencyInjection
         services.AddScoped<ISeedUsuarioCargoInicial, SeedUsuarioCargoInicial>();
 
         // Autenticador
-        services.AddScoped<IAutenticar, AutenticarServico>();
+        // services.AddScoped<IAutenticar, AutenticarServico>();
 
         services.AddAutoMapper(typeof(DominioParaDTOMappingPerfil));
 

@@ -32,16 +32,10 @@ public class InstrumentosController : ControllerBase
     [AllowAnonymous]
     [HttpGet(Name ="GetTodosInstrumentos")]
     [ProducesResponseType(200)]
-    [ProducesResponseType(404)]
     [ProducesResponseType(500)]
     public async Task<ActionResult<IEnumerable<InstrumentoDTO>>> Get(string? propriedade)
     {
-
         var instrumentos = await _instrumentoService.GetInstrumentosAsync(propriedade);
-        if (instrumentos == null)
-        {
-            return NotFound();
-        }
         return Ok(instrumentos);
     }
 
@@ -51,7 +45,6 @@ public class InstrumentosController : ControllerBase
     /// <param name="id">Por exemplo: <i>1</i></param>
     /// <returns>Retorna um Instrumento</returns>
     /// <response code="200">Retorna um Instrumento</response>
-    /// <response code="404">Nenhum item foi encontrado</response>
     /// <response code="500">Erro no servidor</response>
     [AllowAnonymous]
     [HttpGet("{id:int}", Name = "GetInstrumento")]
