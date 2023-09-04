@@ -27,7 +27,6 @@ public class InstrumentosController : ControllerBase
     /// </param>
     /// <returns>Retorna lista de Instrumentos</returns>
     /// <response code="200">Retorna lista de Instrumentos</response>
-    /// <response code="404">Nenhum item foi encontrado</response>
     /// <response code="500">Erro no servidor</response>
     [AllowAnonymous]
     [HttpGet(Name ="GetTodosInstrumentos")]
@@ -49,7 +48,7 @@ public class InstrumentosController : ControllerBase
     [AllowAnonymous]
     [HttpGet("{id:int}", Name = "GetInstrumento")]
     [ProducesResponseType(200)]
-    [ProducesResponseType(404)]
+    [ProducesResponseType(typeof(void), StatusCodes.Status404NotFound)]
     [ProducesResponseType(500)]
     public async Task<ActionResult<InstrumentoDTO>> GetPorId(int id)
     {
@@ -66,12 +65,14 @@ public class InstrumentosController : ControllerBase
     /// </summary>
     /// <returns>Retorna o Instrumento criado</returns>
     /// <response code="201">Retorna o Instrumento criado</response>
+    /// <response code="400">Corpo da requisição está incorreto</response>
     /// <response code="401">Credenciais inválidas</response>
     /// <response code="500">Erro no servidor</response>
     [Authorize]
     [HttpPost]
     [ProducesResponseType(201)]
-    [ProducesResponseType(401)]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(500)]
     public async Task<ActionResult> Post([FromBody] InstrumentoDTO instrumento)
     {
@@ -90,14 +91,16 @@ public class InstrumentosController : ControllerBase
     /// <returns>Retorna o Instrumento atualizado</returns>
     /// <param name="id">Id do Instrumento</param>
     /// <response code="201">Retorna o Instrumento atualizado</response>
+    /// <response code="400">Corpo da requisição está incorreto</response>
     /// <response code="401">Credenciais inválidas</response>
     /// <response code="404">Instrumento não encontrado</response>
     /// <response code="500">Erro no servidor</response>
     [Authorize]
     [HttpPut]
     [ProducesResponseType(201)]
-    [ProducesResponseType(401)]
-    [ProducesResponseType(404)]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(typeof(void), StatusCodes.Status404NotFound)]
     [ProducesResponseType(500)]
     public async Task<ActionResult> Put(int id, [FromBody] InstrumentoDTO instrumento)
     {
@@ -128,8 +131,8 @@ public class InstrumentosController : ControllerBase
     [Authorize]
     [HttpDelete("{id:int}")]
     [ProducesResponseType(200)]
-    [ProducesResponseType(401)]
-    [ProducesResponseType(404)]
+    [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(typeof(void), StatusCodes.Status404NotFound)]
     [ProducesResponseType(500)]
     public async Task<ActionResult<InstrumentoDTO>> Delete(int id)
     {
