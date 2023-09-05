@@ -57,16 +57,5 @@ public class BasicAuthHandler : AuthenticationHandler<AuthenticationSchemeOption
         if (!user)
             return await Task.FromResult(AuthenticateResult.Fail("Invalid Credentials"));
         return await Task.FromResult(AuthenticateResult.Success(ticket));
-/*        var claims = new[]
-            {
-                new Claim(ClaimTypes.NameIdentifier, "teste"),
-                new Claim(ClaimTypes.Name, "teste"),
-            };
-
-        var identity = new ClaimsIdentity(claims, Scheme.Name);
-        var principal = new ClaimsPrincipal(identity);
-
-        ticket = new AuthenticationTicket(principal, Scheme.Name);
-        return await Task.FromResult(AuthenticateResult.Success(ticket));*/
     }
 }
