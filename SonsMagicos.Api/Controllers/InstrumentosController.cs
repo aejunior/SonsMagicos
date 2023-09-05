@@ -155,7 +155,6 @@ public class InstrumentosController : ControllerBase
     [HttpGet]
     [ProducesResponseType(200)]
     [ProducesResponseType(500)]
-    [Produces("text/plain")]
     [Route("ValorPorTipo")]
     public async Task<ActionResult<decimal>> GetPrecoPorTipo(TipoInstrumentoDTO tipo)
     {
