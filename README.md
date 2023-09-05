@@ -21,9 +21,7 @@ Uma loja vende instrumentos musicais mágicos. Cada instrumento tem um nome, tip
 - Criar uma funcionalidade que calcule o preço total de todos os instrumentos de um tipo específico (ex: todos os instrumentos de corda).
 - Criar uma funcionalidade de busca textual (texto exato) para as propriedades mágicas (ex: ao buscar "dormir", deve retornar todos os instrumentos com poderes que contenham "dormir")
 - O código deve ser bem organizado, comentado e seguir padrões de desenvolvimento, como os princípios SOLID.
-    - DOING:
 - Implementar uma camada de autenticação básica para acessar os endpoints da API.
-    - DOING:
 - O projeto deve ser feito em .NET 6.0 ou 7.0 e deve executar em windows/linux.
 - Deve ser utilizado o Entity Framework Core como ORM.
 

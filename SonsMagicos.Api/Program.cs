@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.OpenApi.Models;
-using SonsMagicos.Api.Auth;
 using SonsMagicos.Dominio.Conta;
 using SonsMagicos.Infraestrutura.Contexto;
 using SonsMagicos.Infraestrutura.IoC;
@@ -53,11 +52,8 @@ app.UseHttpsRedirection();
 app.UseStatusCodePages();
 app.UseRouting();
 
-
-app.UseAuthentication();
 app.UseAuthorization();
-
-app.UseMiddleware<BasicAuthMiddleware>();
+app.UseAuthentication();
 
 app.MapControllers();
 
@@ -95,7 +91,7 @@ void ExecutingMigration(IApplicationBuilder app)
                 }
             }
         }
-        catch (Exception ex)
+        catch
         {
         }
 

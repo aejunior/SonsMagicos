@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,7 +36,13 @@ static public class DependencyInjection
         services.AddScoped<ISeedUsuarioCargoInicial, SeedUsuarioCargoInicial>();
 
         // Autenticador
-        // services.AddScoped<IAutenticar, AutenticarServico>();
+        services.AddScoped<IAutenticar, AutenticarServico>();
+
+        services.AddAuthentication("BasicAuthentication").
+            AddScheme<AuthenticationSchemeOptions, BasicAuthHandler>
+            ("BasicAuthentication", null);
+
+     
 
         services.AddAutoMapper(typeof(DominioParaDTOMappingPerfil));
 

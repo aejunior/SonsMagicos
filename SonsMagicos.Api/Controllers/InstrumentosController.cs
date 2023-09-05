@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using SonsMagicos.Api.Authorization;
 using SonsMagicos.Aplicacao.DTOs;
 using SonsMagicos.Aplicacao.Interfaces;
 
-using SonsMagicos.Api.Auth;
 
 namespace SonsMagicos.Api.Controllers;
 
@@ -29,7 +30,7 @@ public class InstrumentosController : ControllerBase
     /// <response code="200">Retorna lista de Instrumentos</response>
     /// <response code="500">Erro no servidor</response>
     [AllowAnonymous]
-    [HttpGet(Name ="GetTodosInstrumentos")]
+    [HttpGet(Name = "GetTodosInstrumentos")]
     [ProducesResponseType(200)]
     [ProducesResponseType(500)]
     public async Task<ActionResult<IEnumerable<InstrumentoDTO>>> Get(string? propriedade)
@@ -68,8 +69,7 @@ public class InstrumentosController : ControllerBase
     /// <response code="400">Corpo da requisição está incorreto</response>
     /// <response code="401">Credenciais inválidas</response>
     /// <response code="500">Erro no servidor</response>
-    [Authorize]
-    [HttpPost]
+    [HttpPost, BasicAuthorization]
     [ProducesResponseType(201)]
     [ProducesResponseType(400)]
     [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
@@ -95,8 +95,7 @@ public class InstrumentosController : ControllerBase
     /// <response code="401">Credenciais inválidas</response>
     /// <response code="404">Instrumento não encontrado</response>
     /// <response code="500">Erro no servidor</response>
-    [Authorize]
-    [HttpPut]
+    [HttpPut, BasicAuthorization]
     [ProducesResponseType(201)]
     [ProducesResponseType(400)]
     [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
@@ -128,8 +127,7 @@ public class InstrumentosController : ControllerBase
     /// <response code="401">Credenciais inválidas</response>
     /// <response code="404">Instrumento não encontrado</response>
     /// <response code="500">Erro no servidor</response>
-    [Authorize]
-    [HttpDelete("{id:int}")]
+    [HttpDelete("{id:int}"), BasicAuthorization]
     [ProducesResponseType(200)]
     [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(typeof(void), StatusCodes.Status404NotFound)]
@@ -153,12 +151,12 @@ public class InstrumentosController : ControllerBase
     /// <returns>Retorna o preço total</returns>
     /// <response code="200">Retorna o preço total</response>
     /// <response code="500">Erro no servidor</response>
+    [AllowAnonymous]
+    [HttpGet]
     [ProducesResponseType(200)]
     [ProducesResponseType(500)]
-    [AllowAnonymous]
     [Produces("text/plain")]
     [Route("ValorPorTipo")]
-    [HttpGet]
     public async Task<ActionResult<decimal>> GetPrecoPorTipo(TipoInstrumentoDTO tipo)
     {
         var total = await _instrumentoService.GetTotalValorPorTipoInstrumentoAsync(tipo);
