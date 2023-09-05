@@ -44,9 +44,6 @@
           },
           "500": {
             "description": "Erro no servidor"
-          },
-          "404": {
-            "description": "Nenhum item foi encontrado"
           }
         }
       },
@@ -76,10 +73,17 @@
         },
         "responses": {
           "201": {
-            "description": "Retorna o Instrumento criado"
+            "description": "Retorna o Instrumento criado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InstrumentoDTO"
+                }
+              }
+            }
           },
-          "401": {
-            "description": "Credenciais inválidas",
+          "400": {
+            "description": "Corpo da requisição está incorreto",
             "content": {
               "application/json": {
                 "schema": {
@@ -87,6 +91,9 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "Credenciais inválidas"
           },
           "500": {
             "description": "Erro no servidor"
@@ -130,27 +137,30 @@
         },
         "responses": {
           "201": {
-            "description": "Retorna o Instrumento atualizado"
+            "description": "Retorna o Instrumento atualizado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InstrumentoDTO"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Corpo da requisição está incorreto",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           },
           "401": {
-            "description": "Credenciais inválidas",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
+            "description": "Credenciais inválidas"
           },
           "404": {
-            "description": "Instrumento não encontrado",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
+            "description": "Instrumento não encontrado"
           },
           "500": {
             "description": "Erro no servidor"
@@ -189,14 +199,7 @@
             }
           },
           "404": {
-            "description": "Nenhum item foi encontrado",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
+            "description": "Not Found"
           },
           "500": {
             "description": "Erro no servidor"
@@ -231,24 +234,10 @@
             }
           },
           "401": {
-            "description": "Credenciais inválidas",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
+            "description": "Credenciais inválidas"
           },
           "404": {
-            "description": "Instrumento não encontrado",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
+            "description": "Instrumento não encontrado"
           },
           "500": {
             "description": "Erro no servidor"

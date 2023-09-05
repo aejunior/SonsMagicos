@@ -9,7 +9,7 @@
                     "description": "",
                     "item": [
                         {
-                            "id": "d203cb7b-264d-4c72-b2b4-23f90faca773",
+                            "id": "695900af-b3e3-4b3f-8745-1bad47bf235b",
                             "name": "Obtém todos os Instrumentos",
                             "request": {
                                 "name": "Obtém todos os Instrumentos",
@@ -47,7 +47,7 @@
                             },
                             "response": [
                                 {
-                                    "id": "73b01f27-9313-45da-9ad5-170524dd9de3",
+                                    "id": "b3a447ef-ddbe-4828-b6eb-d073ec898eaf",
                                     "name": "Retorna lista de Instrumentos",
                                     "originalRequest": {
                                         "url": {
@@ -96,56 +96,12 @@
                                             "value": "application/json"
                                         }
                                     ],
-                                    "body": "[\n  {\n    \"nome\": \"<string>\",\n    \"preco\": \"<number>\",\n    \"propriedade\": \"<string>\",\n    \"tipo\": 3,\n    \"id\": \"<integer>\"\n  },\n  {\n    \"nome\": \"<string>\",\n    \"preco\": \"<number>\",\n    \"propriedade\": \"<string>\",\n    \"tipo\": 2,\n    \"id\": \"<integer>\"\n  }\n]",
+                                    "body": "[\n  {\n    \"nome\": \"<string>\",\n    \"preco\": \"<number>\",\n    \"propriedade\": \"<string>\",\n    \"tipo\": 3,\n    \"id\": \"<integer>\"\n  },\n  {\n    \"nome\": \"<string>\",\n    \"preco\": \"<number>\",\n    \"propriedade\": \"<string>\",\n    \"tipo\": 1,\n    \"id\": \"<integer>\"\n  }\n]",
                                     "cookie": [],
                                     "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "id": "37f0b8e8-5b56-4704-a2d4-14a4c66346ec",
-                                    "name": "Nenhum item foi encontrado",
-                                    "originalRequest": {
-                                        "url": {
-                                            "path": [
-                                                "api",
-                                                "Instrumentos"
-                                            ],
-                                            "host": [
-                                                "{{baseUrl}}"
-                                            ],
-                                            "query": [
-                                                {
-                                                    "disabled": false,
-                                                    "description": {
-                                                        "content": "Filtra por propriedade os Instrumentos.<para />\r\nPor exemplo: <i>dormir</i>",
-                                                        "type": "text/plain"
-                                                    },
-                                                    "key": "propriedade",
-                                                    "value": "<string>"
-                                                }
-                                            ],
-                                            "variable": []
-                                        },
-                                        "header": [
-                                            {
-                                                "description": {
-                                                    "content": "Added as a part of security scheme: basic",
-                                                    "type": "text/plain"
-                                                },
-                                                "key": "Authorization",
-                                                "value": "Basic <credentials>"
-                                            }
-                                        ],
-                                        "method": "GET",
-                                        "body": {}
-                                    },
-                                    "status": "Not Found",
-                                    "code": 404,
-                                    "header": [],
-                                    "cookie": [],
-                                    "_postman_previewlanguage": "text"
-                                },
-                                {
-                                    "id": "654f6643-f925-4660-bcdb-fe99fb038117",
+                                    "id": "8cd5513b-f1c4-4814-8a76-b67afe394fbc",
                                     "name": "Erro no servidor",
                                     "originalRequest": {
                                         "url": {
@@ -195,7 +151,7 @@
                             }
                         },
                         {
-                            "id": "92e3a112-52e1-44fb-8149-6bbcf2f93ccd",
+                            "id": "8fb4d745-21a2-4d98-82fd-c253b5026dc5",
                             "name": "Cria um Instrumento",
                             "request": {
                                 "name": "Cria um Instrumento",
@@ -236,55 +192,8 @@
                             },
                             "response": [
                                 {
-                                    "id": "93198224-43ec-4843-828c-a32cf45c8ea9",
+                                    "id": "8549d440-1544-4061-a29d-7bb1e310a116",
                                     "name": "Retorna o Instrumento criado",
-                                    "originalRequest": {
-                                        "url": {
-                                            "path": [
-                                                "api",
-                                                "Instrumentos"
-                                            ],
-                                            "host": [
-                                                "{{baseUrl}}"
-                                            ],
-                                            "query": [],
-                                            "variable": []
-                                        },
-                                        "header": [
-                                            {
-                                                "key": "Content-Type",
-                                                "value": "application/json"
-                                            },
-                                            {
-                                                "description": {
-                                                    "content": "Added as a part of security scheme: basic",
-                                                    "type": "text/plain"
-                                                },
-                                                "key": "Authorization",
-                                                "value": "Basic <credentials>"
-                                            }
-                                        ],
-                                        "method": "POST",
-                                        "body": {
-                                            "mode": "raw",
-                                            "raw": "{\n  \"nome\": \"<string>\",\n  \"preco\": \"<number>\",\n  \"propriedade\": \"<string>\",\n  \"tipo\": 3,\n  \"id\": \"<integer>\"\n}",
-                                            "options": {
-                                                "raw": {
-                                                    "headerFamily": "json",
-                                                    "language": "json"
-                                                }
-                                            }
-                                        }
-                                    },
-                                    "status": "Created",
-                                    "code": 201,
-                                    "header": [],
-                                    "cookie": [],
-                                    "_postman_previewlanguage": "text"
-                                },
-                                {
-                                    "id": "65593449-f13f-4e4f-bb38-c5882f50e7cf",
-                                    "name": "Credenciais inválidas",
                                     "originalRequest": {
                                         "url": {
                                             "path": [
@@ -327,8 +236,65 @@
                                             }
                                         }
                                     },
-                                    "status": "Unauthorized",
-                                    "code": 401,
+                                    "status": "Created",
+                                    "code": 201,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n  \"nome\": \"<string>\",\n  \"preco\": \"<number>\",\n  \"propriedade\": \"<string>\",\n  \"tipo\": 3,\n  \"id\": \"<integer>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                },
+                                {
+                                    "id": "9136dc23-dcab-4a0e-9532-9a1668f66376",
+                                    "name": "Corpo da requisição está incorreto",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "api",
+                                                "Instrumentos"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "description": {
+                                                    "content": "Added as a part of security scheme: basic",
+                                                    "type": "text/plain"
+                                                },
+                                                "key": "Authorization",
+                                                "value": "Basic <credentials>"
+                                            }
+                                        ],
+                                        "method": "POST",
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n  \"nome\": \"<string>\",\n  \"preco\": \"<number>\",\n  \"propriedade\": \"<string>\",\n  \"tipo\": 3,\n  \"id\": \"<integer>\"\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "headerFamily": "json",
+                                                    "language": "json"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "status": "Bad Request",
+                                    "code": 400,
                                     "header": [
                                         {
                                             "key": "Content-Type",
@@ -340,7 +306,54 @@
                                     "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "id": "35fbac13-10d2-4fe0-9df5-fc3b0788ff13",
+                                    "id": "c3896968-c487-4a8b-be75-b7a722e55005",
+                                    "name": "Credenciais inválidas",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "api",
+                                                "Instrumentos"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "description": {
+                                                    "content": "Added as a part of security scheme: basic",
+                                                    "type": "text/plain"
+                                                },
+                                                "key": "Authorization",
+                                                "value": "Basic <credentials>"
+                                            }
+                                        ],
+                                        "method": "POST",
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n  \"nome\": \"<string>\",\n  \"preco\": \"<number>\",\n  \"propriedade\": \"<string>\",\n  \"tipo\": 3,\n  \"id\": \"<integer>\"\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "headerFamily": "json",
+                                                    "language": "json"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "status": "Unauthorized",
+                                    "code": 401,
+                                    "header": [],
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "text"
+                                },
+                                {
+                                    "id": "cf6b64dc-1b51-402b-a2cb-d4bb3c91345c",
                                     "name": "Erro no servidor",
                                     "originalRequest": {
                                         "url": {
@@ -393,7 +406,7 @@
                             }
                         },
                         {
-                            "id": "520d186e-c82b-4baf-8366-e7aa6a523c61",
+                            "id": "0fd15a3b-046e-48a4-8d3d-a9a8b391eb1d",
                             "name": "Atualiza um Instrumento",
                             "request": {
                                 "name": "Atualiza um Instrumento",
@@ -444,7 +457,7 @@
                             },
                             "response": [
                                 {
-                                    "id": "60440ad5-7226-4366-a0c8-9387dbcfe201",
+                                    "id": "80b11a75-e679-49de-a9e4-d37eaca3aaf4",
                                     "name": "Retorna o Instrumento atualizado",
                                     "originalRequest": {
                                         "url": {
@@ -474,6 +487,10 @@
                                                 "value": "application/json"
                                             },
                                             {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
                                                 "description": {
                                                     "content": "Added as a part of security scheme: basic",
                                                     "type": "text/plain"
@@ -496,12 +513,85 @@
                                     },
                                     "status": "Created",
                                     "code": 201,
-                                    "header": [],
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n  \"nome\": \"<string>\",\n  \"preco\": \"<number>\",\n  \"propriedade\": \"<string>\",\n  \"tipo\": 3,\n  \"id\": \"<integer>\"\n}",
                                     "cookie": [],
-                                    "_postman_previewlanguage": "text"
+                                    "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "id": "9e303295-093f-4373-9f6a-752d7136a1eb",
+                                    "id": "40ce2410-8a3f-4ef2-a897-021f5a233333",
+                                    "name": "Corpo da requisição está incorreto",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "api",
+                                                "Instrumentos"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "Id do Instrumento",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "key": "id",
+                                                    "value": "<integer>"
+                                                }
+                                            ],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "description": {
+                                                    "content": "Added as a part of security scheme: basic",
+                                                    "type": "text/plain"
+                                                },
+                                                "key": "Authorization",
+                                                "value": "Basic <credentials>"
+                                            }
+                                        ],
+                                        "method": "PUT",
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n  \"nome\": \"<string>\",\n  \"preco\": \"<number>\",\n  \"propriedade\": \"<string>\",\n  \"tipo\": 3,\n  \"id\": \"<integer>\"\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "headerFamily": "json",
+                                                    "language": "json"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "status": "Bad Request",
+                                    "code": 400,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n  \"type\": \"<string>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                },
+                                {
+                                    "id": "3f3c1035-3133-4fe2-9c76-86f33e9c4f8d",
                                     "name": "Credenciais inválidas",
                                     "originalRequest": {
                                         "url": {
@@ -531,10 +621,6 @@
                                                 "value": "application/json"
                                             },
                                             {
-                                                "key": "Accept",
-                                                "value": "application/json"
-                                            },
-                                            {
                                                 "description": {
                                                     "content": "Added as a part of security scheme: basic",
                                                     "type": "text/plain"
@@ -557,18 +643,12 @@
                                     },
                                     "status": "Unauthorized",
                                     "code": 401,
-                                    "header": [
-                                        {
-                                            "key": "Content-Type",
-                                            "value": "application/json"
-                                        }
-                                    ],
-                                    "body": "{\n  \"type\": \"<string>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<string>\"\n}",
+                                    "header": [],
                                     "cookie": [],
-                                    "_postman_previewlanguage": "json"
+                                    "_postman_previewlanguage": "text"
                                 },
                                 {
-                                    "id": "7d4ea3d0-9deb-4d19-8c62-0c7191fe04d7",
+                                    "id": "9b10514a-7570-4457-829a-3ddcf7547993",
                                     "name": "Instrumento não encontrado",
                                     "originalRequest": {
                                         "url": {
@@ -598,10 +678,6 @@
                                                 "value": "application/json"
                                             },
                                             {
-                                                "key": "Accept",
-                                                "value": "application/json"
-                                            },
-                                            {
                                                 "description": {
                                                     "content": "Added as a part of security scheme: basic",
                                                     "type": "text/plain"
@@ -624,18 +700,12 @@
                                     },
                                     "status": "Not Found",
                                     "code": 404,
-                                    "header": [
-                                        {
-                                            "key": "Content-Type",
-                                            "value": "application/json"
-                                        }
-                                    ],
-                                    "body": "{\n  \"type\": \"<string>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<string>\"\n}",
+                                    "header": [],
                                     "cookie": [],
-                                    "_postman_previewlanguage": "json"
+                                    "_postman_previewlanguage": "text"
                                 },
                                 {
-                                    "id": "b08e3d91-4e64-412c-a005-754256b2ff32",
+                                    "id": "dab4d925-1e0e-454e-a66c-a8af1b76c009",
                                     "name": "Erro no servidor",
                                     "originalRequest": {
                                         "url": {
@@ -702,7 +772,7 @@
                             "description": "",
                             "item": [
                                 {
-                                    "id": "a47fffab-1cb1-4eec-8898-35b8e8c64031",
+                                    "id": "97ab58f5-28d8-4612-9920-377bd6ba401e",
                                     "name": "Obtém Instrumento por Id",
                                     "request": {
                                         "name": "Obtém Instrumento por Id",
@@ -738,7 +808,7 @@
                                     },
                                     "response": [
                                         {
-                                            "id": "2271a81d-aaae-43a4-a287-7a987e1b4a45",
+                                            "id": "6b969448-a0a1-42be-9469-2bf003573d88",
                                             "name": "Retorna um Instrumento",
                                             "originalRequest": {
                                                 "url": {
@@ -783,8 +853,8 @@
                                             "_postman_previewlanguage": "json"
                                         },
                                         {
-                                            "id": "7d67a91f-b8e7-4a8b-970b-865de81ec3b1",
-                                            "name": "Nenhum item foi encontrado",
+                                            "id": "554d3af6-aa59-4469-b572-ddd921ad4024",
+                                            "name": "Not Found",
                                             "originalRequest": {
                                                 "url": {
                                                     "path": [
@@ -800,10 +870,6 @@
                                                 },
                                                 "header": [
                                                     {
-                                                        "key": "Accept",
-                                                        "value": "application/json"
-                                                    },
-                                                    {
                                                         "description": {
                                                             "content": "Added as a part of security scheme: basic",
                                                             "type": "text/plain"
@@ -817,18 +883,12 @@
                                             },
                                             "status": "Not Found",
                                             "code": 404,
-                                            "header": [
-                                                {
-                                                    "key": "Content-Type",
-                                                    "value": "application/json"
-                                                }
-                                            ],
-                                            "body": "{\n  \"type\": \"<string>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<string>\"\n}",
+                                            "header": [],
                                             "cookie": [],
-                                            "_postman_previewlanguage": "json"
+                                            "_postman_previewlanguage": "text"
                                         },
                                         {
-                                            "id": "cc43f59b-580a-40cf-9c0b-6d748bc4c019",
+                                            "id": "ce9b71ba-4997-4a43-a7ba-78f670fa88dc",
                                             "name": "Erro no servidor",
                                             "originalRequest": {
                                                 "url": {
@@ -869,7 +929,7 @@
                                     }
                                 },
                                 {
-                                    "id": "26246207-e63a-4272-be21-291f36ee1454",
+                                    "id": "b36be0e8-c3c6-46a7-a2f9-a989cdade731",
                                     "name": "Deleta um Instrumento",
                                     "request": {
                                         "name": "Deleta um Instrumento",
@@ -905,7 +965,7 @@
                                     },
                                     "response": [
                                         {
-                                            "id": "4073094c-1d14-4e50-8d28-83436d381a3e",
+                                            "id": "97738b5e-7663-43ea-8b07-151a33d4fde2",
                                             "name": "Retorna o Instrumento excluído",
                                             "originalRequest": {
                                                 "url": {
@@ -950,7 +1010,7 @@
                                             "_postman_previewlanguage": "json"
                                         },
                                         {
-                                            "id": "5c1a20fa-4719-4f81-b44e-db1a9a72a4c0",
+                                            "id": "aee58aa8-08b3-46ac-8911-5d5d11d7c4a6",
                                             "name": "Credenciais inválidas",
                                             "originalRequest": {
                                                 "url": {
@@ -967,10 +1027,6 @@
                                                 },
                                                 "header": [
                                                     {
-                                                        "key": "Accept",
-                                                        "value": "application/json"
-                                                    },
-                                                    {
                                                         "description": {
                                                             "content": "Added as a part of security scheme: basic",
                                                             "type": "text/plain"
@@ -984,18 +1040,12 @@
                                             },
                                             "status": "Unauthorized",
                                             "code": 401,
-                                            "header": [
-                                                {
-                                                    "key": "Content-Type",
-                                                    "value": "application/json"
-                                                }
-                                            ],
-                                            "body": "{\n  \"type\": \"<string>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<string>\"\n}",
+                                            "header": [],
                                             "cookie": [],
-                                            "_postman_previewlanguage": "json"
+                                            "_postman_previewlanguage": "text"
                                         },
                                         {
-                                            "id": "04971a94-79ee-4025-ba2b-ff4a20231d43",
+                                            "id": "a4661de6-b064-4136-97de-569ec3b73c9f",
                                             "name": "Instrumento não encontrado",
                                             "originalRequest": {
                                                 "url": {
@@ -1012,10 +1062,6 @@
                                                 },
                                                 "header": [
                                                     {
-                                                        "key": "Accept",
-                                                        "value": "application/json"
-                                                    },
-                                                    {
                                                         "description": {
                                                             "content": "Added as a part of security scheme: basic",
                                                             "type": "text/plain"
@@ -1029,18 +1075,12 @@
                                             },
                                             "status": "Not Found",
                                             "code": 404,
-                                            "header": [
-                                                {
-                                                    "key": "Content-Type",
-                                                    "value": "application/json"
-                                                }
-                                            ],
-                                            "body": "{\n  \"type\": \"<string>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<string>\"\n}",
+                                            "header": [],
                                             "cookie": [],
-                                            "_postman_previewlanguage": "json"
+                                            "_postman_previewlanguage": "text"
                                         },
                                         {
-                                            "id": "f6848096-8769-49e6-ad01-ff4bd6b43367",
+                                            "id": "9d7d98a8-d263-4d02-8869-d5ea4b2bb6c1",
                                             "name": "Erro no servidor",
                                             "originalRequest": {
                                                 "url": {
@@ -1087,7 +1127,7 @@
                             "description": "",
                             "item": [
                                 {
-                                    "id": "457d5923-1af2-4e58-a6f2-ef44d8cde8c7",
+                                    "id": "655a3d85-0082-47cf-9d82-c637171d1251",
                                     "name": "Calcula o preço total de todos os Instrumentos de um tipo específico",
                                     "request": {
                                         "name": "Calcula o preço total de todos os Instrumentos de um tipo específico",
@@ -1109,7 +1149,7 @@
                                                         "type": "text/plain"
                                                     },
                                                     "key": "tipo",
-                                                    "value": "1"
+                                                    "value": "2"
                                                 }
                                             ],
                                             "variable": []
@@ -1126,7 +1166,7 @@
                                     },
                                     "response": [
                                         {
-                                            "id": "519ace56-a7be-4dc2-a8b9-52b8b47ed06b",
+                                            "id": "8e4bbfe9-2e67-420f-ad23-97169a6f6261",
                                             "name": "Retorna o preço total",
                                             "originalRequest": {
                                                 "url": {
@@ -1146,7 +1186,7 @@
                                                                 "type": "text/plain"
                                                             },
                                                             "key": "tipo",
-                                                            "value": "1"
+                                                            "value": "2"
                                                         }
                                                     ],
                                                     "variable": []
@@ -1181,7 +1221,7 @@
                                             "_postman_previewlanguage": "json"
                                         },
                                         {
-                                            "id": "3f9b9169-d8c1-4faa-92a6-07d3ea03809a",
+                                            "id": "a720e9af-389a-4a43-b941-e1df740a2323",
                                             "name": "Erro no servidor",
                                             "originalRequest": {
                                                 "url": {
@@ -1201,7 +1241,7 @@
                                                                 "type": "text/plain"
                                                             },
                                                             "key": "tipo",
-                                                            "value": "1"
+                                                            "value": "2"
                                                         }
                                                     ],
                                                     "variable": []
@@ -1261,7 +1301,7 @@
         }
     ],
     "info": {
-        "_postman_id": "4183ffc5-a0a3-4879-a9eb-82909771846d",
+        "_postman_id": "07377ef1-86b2-4581-8303-f938d34147d7",
         "name": "SonsMagicos.Api",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {
