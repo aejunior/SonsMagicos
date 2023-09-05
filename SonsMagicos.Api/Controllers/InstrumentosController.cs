@@ -48,7 +48,7 @@ public class InstrumentosController : ControllerBase
     /// <response code="500">Erro no servidor</response>
     [AllowAnonymous]
     [HttpGet("{id:int}", Name = "GetInstrumento")]
-    [ProducesResponseType(200)]
+    [ProducesResponseType(typeof(InstrumentoDTO),200)]
     [ProducesResponseType(typeof(void), StatusCodes.Status404NotFound)]
     [ProducesResponseType(500)]
     public async Task<ActionResult<InstrumentoDTO>> GetPorId(int id)
@@ -70,7 +70,7 @@ public class InstrumentosController : ControllerBase
     /// <response code="401">Credenciais inválidas</response>
     /// <response code="500">Erro no servidor</response>
     [HttpPost, BasicAuthorization]
-    [ProducesResponseType(201)]
+    [ProducesResponseType(typeof(InstrumentoDTO),201)]
     [ProducesResponseType(400)]
     [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(500)]
@@ -96,7 +96,7 @@ public class InstrumentosController : ControllerBase
     /// <response code="404">Instrumento não encontrado</response>
     /// <response code="500">Erro no servidor</response>
     [HttpPut, BasicAuthorization]
-    [ProducesResponseType(201)]
+    [ProducesResponseType(typeof(InstrumentoDTO), 201)]
     [ProducesResponseType(400)]
     [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(typeof(void), StatusCodes.Status404NotFound)]
@@ -128,7 +128,7 @@ public class InstrumentosController : ControllerBase
     /// <response code="404">Instrumento não encontrado</response>
     /// <response code="500">Erro no servidor</response>
     [HttpDelete("{id:int}"), BasicAuthorization]
-    [ProducesResponseType(200)]
+    [ProducesResponseType(typeof(InstrumentoDTO),200)]
     [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(typeof(void), StatusCodes.Status404NotFound)]
     [ProducesResponseType(500)]
