@@ -51,11 +51,11 @@ public class BasicAuthHandler : AuthenticationHandler<AuthenticationSchemeOption
         }
         catch
         {
-            return await Task.FromResult(AuthenticateResult.Fail("Error Occured.Authorization failed."));
+            return await Task.FromResult(AuthenticateResult.Fail("Falha com credenciais."));
         }
 
         if (!user)
-            return await Task.FromResult(AuthenticateResult.Fail("Invalid Credentials"));
+            return await Task.FromResult(AuthenticateResult.Fail("Credenciais inválidas."));
         return await Task.FromResult(AuthenticateResult.Success(ticket));
     }
 }
