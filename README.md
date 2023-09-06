@@ -1,4 +1,5 @@
 # Teste 2: A Loja de Instrumentos Musicais Mágicos
+
 ## Contexto 
 Uma loja vende instrumentos musicais mágicos. Cada instrumento tem um nome, tipo (corda, sopro, percussão), preço e uma propriedade mágica (ex: flauta que faz o ouvinte dormir). A loja quer uma API RESTful para gerenciar seu inventário. Lista de Requisitos
 
@@ -31,8 +32,30 @@ Uma loja vende instrumentos musicais mágicos. Cada instrumento tem um nome, tip
 - Indicação da versão e tipo do banco de dados utilizado.
 - Instruções para criar o banco de dados e tabelas necessárias (pode ser um script SQL ou um README específico).
 
+## Instalação
 
-A entrega do teste deve ser feita até o dia 7 de setembro de 2023 - quinta-feira da próxima semana.
+Ambiente de teste:
+- Windows 10
+- Docker 24.0.5, build ced0996
+- .NET 7.0
+- SQL Server 2022
+
+### Pré-requisitos
+- [Git](https://git-scm.com/)
+- [.NET 7.0](https://dotnet.microsoft.com/download/dotnet/7.0)
+- [Docker](https://docs.docker.com/get-docker/)
+- [SQL Server 2022 (opcional)](https://www.microsoft.com/pt-br/sql-server/sql-server-2022)
+
+### Execução
+
+#### Com Docker
+- Clone o repositório
+- Execute o comando `docker-compose up` na raiz do projeto
+
+#### Sem Docker
+- Clone o repositório
+- Execute o comando `dotnet run` na raiz do projeto
+
 
 Referências
 - [Clean Architecture Essencial - ASP .NET Core com C#](https://www.udemy.com/course/clean-architecture-essencial-asp-net-core-com-c/learn/lecture/26063534)
@@ -46,3 +69,5 @@ Referências
 - [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html)
 - [Implementar repositórios personalizados com o Entity Framework Core](https://learn.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implementation-entity-framework-core#implement-custom-repositories-with-entity-framework-core)
 - [MediatR Wiki](https://github.com/jbogard/MediatR/wiki)
+- [Basic authentication: How to add in ASP.NET Core](https://www.youtube.com/watch?v=rGfxURLQp7o)
+- [https://www.thecodebuzz.com/basic-authentication-asp-net-core-with-csharp-example](https://www.thecodebuzz.com/basic-authentication-asp-net-core-with-csharp-example)
