@@ -45,4 +45,4 @@ Referências
 - [Implementar repositórios personalizados com o Entity Framework Core](https://learn.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implementation-entity-framework-core#implement-custom-repositories-with-entity-framework-core)
 - [MediatR Wiki](https://github.com/jbogard/MediatR/wiki)
 - [Basic authentication: How to add in ASP.NET Core](https://www.youtube.com/watch?v=rGfxURLQp7o)
-- [https://www.thecodebuzz.com/basic-authentication-asp-net-core-with-csharp-example](https://www.thecodebuzz.com/basic-authentication-asp-net-core-with-csharp-example)
+- [Basic Authentication in ASP.NET Core with example](https://www.thecodebuzz.com/basic-authentication-asp-net-core-with-csharp-example)
